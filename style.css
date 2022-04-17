@@ -91,6 +91,9 @@ p{
     background-color: #158eda;
     transition-duration: .1s;
 }
+#sct4 .button.plain{
+    max-width: 100%;
+}
 
 header{
     background-color: #fbf8f3;
