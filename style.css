@@ -1,0 +1,535 @@
+/*
+author : Jules Tennenbaum
+date   : 17/04/2022
+title  : html/css responsive website from Codewell visuals (https://www.codewell.cc/challenges)
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a:any-link{
+    text-decoration: none;
+    font-weight: 500;
+}
+
+body{
+    width: 100vw;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar{
+    width: 15px;
+    height: 0;
+}
+::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #c0b5a388;
+    border-radius: 3px;
+}
+
+h2{
+    font-size: 2.6em;
+}
+
+p{
+    color: #737373;
+    font-size: 1.2em;
+    line-height: 1.7em;
+    font-weight: 400;
+}
+
+.logo{
+    font-style: italic;
+    font-size: 1.6em;
+    font-weight: 700;
+    color: #3180f5;
+}
+
+.action{
+    color: #3180f5;
+    font-weight: 700;
+}
+.action:hover{
+    background-color: #1da1f222;
+    transition-duration: .1;
+}
+
+.button{
+    min-width: 300px;
+    width: 100%;
+    height: 60px;
+    font-size: 1em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+}
+.button p{
+    color: inherit;
+    margin: 0 10px;
+}
+.button img{
+    height: 1.2em;
+}
+.button img.arrow{
+    height: 0.7em;
+}
+
+.button.plain{
+    background-color: #1da1f2;
+    color: #fff;
+    transition-duration: .1s;
+}
+.button.plain:hover{
+    background-color: #158eda;
+    transition-duration: .1s;
+}
+
+header{
+    background-color: #fbf8f3;
+}
+#sct1{
+    background-color: #fbf8f3;
+}
+#sct2{
+    background-color: #fff;
+}
+#sct3{
+    background-color: #d7f5f5;
+}
+#sct4{
+    background-color: #fff;
+}
+footer{
+    background-color: #d7f5f5;
+}
+
+
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 150px;
+    width: 100vw;
+    padding: 0 30px;
+}
+
+section{
+    width: 100vw;
+    padding: 0 30px;
+}
+
+#sct1{
+    padding-bottom: 50px;
+}
+#sct2{
+    padding-top: 110px;
+    padding-bottom: 80px;
+}
+#sct3{
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+#sct4{
+    padding-top: 110px;
+    padding-bottom: 80px;
+}
+footer{
+    width: 100vw;
+    padding: 30px;
+}
+
+section#sct1 .leftHalf{
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+nav a{
+    transition-duration: .2s;
+}
+header nav a{
+    color: #737373;
+}
+header nav a:hover{
+    color: #000;
+}
+footer nav *:hover{
+    filter: invert(20%);
+}
+
+section#sct1 > img, section#sct1 .rightHalf > img{
+    width: 100%;
+}
+
+.doubleButton{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin: 15px 0;
+}
+
+#profile-pics-row{
+    width: 200vw;
+}
+#profile-pics-row > img{
+    border-radius: 50%;
+    position: relative;
+    height: 50px;
+    width: 50px;
+}
+
+#profile-pics-row > img:nth-child(2){
+    left: calc( -27px * 1 )
+}
+#profile-pics-row > img:nth-child(3){
+    left: calc( -27px * 2 )
+}
+#profile-pics-row > img:nth-child(4){
+    left: calc( -27px * 3 )
+}
+#profile-pics-row > img:nth-child(5){
+    left: calc( -27px * 4 )
+}
+#profile-pics-row > img:nth-child(6){
+    left: calc( -27px * 5 )
+}
+#profile-pics-row > img:nth-child(7){
+    left: calc( -27px * 6 )
+}
+#profile-pics-row > img:nth-child(8){
+    left: calc( -27px * 7 )
+}
+#profile-pics-row > img:nth-child(9){
+    left: calc( -27px * 8 )
+}
+
+
+#sct2{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+#sct2 .cards-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-items: center;
+    gap: 30px;
+}
+.cards-container .card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 25px;
+    border: 1px solid #73737377;
+    border-radius: 7px;
+}
+.cards-container .card .emoji{
+    font-size: 2.5em;
+}
+.cards-container .card h3{
+    font-size: 1.35em;
+}
+
+
+#sct3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+.tweets-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 25px;
+}
+.tweet{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: calc( 100vw - 60px );
+    max-width: 500px;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 7px;
+    padding: 25px 15px;
+}
+.tweet .head{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.tweet .head .profile{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+}
+.tweet .head img:not(.tweeter-logo){
+    height: 60px;
+    width: 60px;
+}
+.tweet .head .tweeter-logo{
+    height: 25px;
+}
+.tweet .foot{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.tweet .foot .likes{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+.tweet .foot .likes img{
+    height: 23px;
+}
+
+
+
+section#sct4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+section#sct4 h2, section#sct4 .subtitle{
+    text-align: center;
+}
+
+.pricing{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 1px solid #ffad23;
+    background-color: #ffad2316;
+    padding: 0 35px;
+    width: 80vw;
+    max-width: 620px;
+    margin-top: 25px;
+}
+.pricing .head{
+    width: 100%;
+    padding: 35px 0 25px 0;
+}
+.pricing .head h5{
+    color: #737373;
+    font-size: 1.7em;
+    font-weight: 500;
+}
+.pricing .head .price{
+    color: #000;
+    font-weight: 700;
+    font-size: 2.5em;
+}
+
+.pricing .content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px 0 15px 0;
+    border-top: 1px solid #73737377;
+    border-bottom: 1px solid #73737377;
+
+}
+.pricing .content div{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.pricing > a{
+    margin: 20px 0 35px 0;
+}
+
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+footer nav{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    justify-content: center;
+}
+footer nav img{
+    height: 25px;
+}
+footer nav a{
+    color: #000; 
+    font-size: 1.3em;
+}
+
+
+/* version mobile */
+@media screen and ( max-width: 690px ){
+    header #burger-menu{
+        height: 26px;
+    }
+    header nav{
+        display: none;
+    }
+    header nav a{
+        height: 60px;
+        width: 100%;
+        text-align: center;
+        line-height: 60px;
+        border-radius: 7px;
+        transition-duration: .1s;
+    }
+    header nav a:hover{
+        background-color: #1da1f222;
+        transition-duration: .1;
+    }
+    header #burger-menu:hover ~ nav, header nav:hover{
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        position: absolute;
+        right: 30px;
+        top: 65px;
+        width: calc( 100% - 90px );
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 25px;
+        box-shadow: 0 10px 50px 0 #73737388;
+    }
+    .tablet, .desktop{
+        display: none;
+    }
+
+}
+
+
+/* commun entre tablette et pc */
+@media screen and ( min-width: 691px ){
+    header nav{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 30px;
+    }
+    h2{
+        font-size: 3.8em;
+    }
+    p{
+        font-size: 1.4em;
+    }
+    .doubleButton{
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        gap: 7px;
+        margin: 15px 0 25px 0;
+    }
+    .doubleButton .button.action{
+        min-width: 150%;
+    }
+
+    footer{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+
+
+/* version tablette */
+@media screen and ( min-width: 691px ) and ( max-width: 1024px ){
+    .phone, .desktop{
+        display: none;
+    }
+    #sct3{
+        align-items: flex-start;
+    }
+    .tweets-container{
+        display: block;
+        white-space: nowrap;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        padding-bottom: 25px;
+    }
+    .tweets-container .tweet{
+        display: inline-flex;
+        flex-wrap: wrap;
+        width: unset;
+    }
+    .tweet:not(:first-child){
+        margin-left: 20px;
+    }
+    .tweet > *{
+        align-self: flex-start;
+    }
+    .tweet > p{
+        display: block;
+        white-space: normal;
+    }
+}
+
+
+
+/* version pc */
+@media screen and ( min-width: 1024px ){
+    .phone, .tablet{
+        display: none;
+    }
+    section, header, footer{
+        padding: 30px 90px;
+    }
+    #sct1{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    #sct1 .leftHalf{
+        width: 50%;
+    }
+    #sct1 .rightHalf, #sct1 .rightHalf img{
+        width: 35%;
+    }
+
+    #sct2 .cards-container .card{
+        width: calc(50vw - 105px);
+    }
+
+    #sct3{
+        align-items: flex-start;
+    }
+    #sct3 .tweets-container{
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    #sct3 .tweets-container .tweet{
+        width: calc( 100vw/3 - 80px );
+    }
+}
